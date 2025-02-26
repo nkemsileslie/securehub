@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Community from './pages/Community';
 import Resources from './pages/Resources';
-import Forums from './pages/Forums';
+import Events from './pages/Events';
 import Jobs from './pages/Jobs';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/community" element={<Community />} />
             <Route path="/resources" element={<Resources />} />
-            <Route path="/forums" element={<Forums />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/jobs" element={<Jobs />} />
           </Routes>
         </main>

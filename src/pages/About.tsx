@@ -2,10 +2,10 @@ import { Shield, Users, Target, Award, Sparkles, Rocket, Heart, Code } from 'luc
 import Button from '../components/Button';
 
 const stats = [
-  { name: 'Active Members', value: '10,000+', icon: Users },
-  { name: 'Certifications Earned', value: '5,000+', icon: Award },
-  { name: 'CTF Challenges', value: '500+', icon: Target },
-  { name: 'Success Stories', value: '1,000+', icon: Heart },
+  { name: 'Active Members', value: 'be NO. 1', icon: Users },
+  { name: 'Certifications Earned', value: 'get certified', icon: Award },
+  { name: 'CTF Challenges', value: 'every month', icon: Target },
+  { name: 'Success Stories', value: '', icon: Heart },
 ];
 
 const team = [
@@ -23,18 +23,39 @@ const team = [
     bio: 'Certified instructor specializing in offensive security.',
     quote: 'The best way to learn is by doing, failing, and trying again.',
   },
+  {
+    name: 'Michael Chen',
+    role: 'Head of Education',
+    image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    bio: 'Certified instructor specializing in offensive security.',
+    quote: 'The best way to learn is by doing, failing, and trying again.',
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Head of Education',
+    image: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    bio: 'Certified instructor specializing in offensive security.',
+    quote: 'The best way to learn is by doing, failing, and trying again.',
+  },
+  {
+    name: 'Dr. Sarah Mitchell',
+    role: 'Founder & CEO',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    bio: 'Former CISO with 15+ years of cybersecurity experience.',
+    quote: "Security is not just about protection; it's about empowerment.",
+  },
 ];
 
 const values = [
   {
     icon: Sparkles,
-    title: 'Innovation First',
-    description: 'We embrace cutting-edge technologies and methodologies.',
+    title: 'Innovate & Inspire',
+    description: 'We cultivate a space where new ideas thrive and creativity drives cybersecurity forward.',
   },
   {
     icon: Users,
     title: 'Community Driven',
-    description: 'Our strength lies in our diverse, supportive community.',
+    description: 'Our strength lies in our vibrant, supportive community where learning and growth are fun and collaborative.',
   },
   {
     icon: Code,
@@ -44,7 +65,7 @@ const values = [
   {
     icon: Rocket,
     title: 'Continuous Growth',
-    description: 'Never stop learning, never stop improving.',
+    description: 'Never stop learning, never stop growing.',
   },
 ];
 
@@ -75,8 +96,8 @@ const About = () => {
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
               SecureHub was born from a simple idea: make cybersecurity education accessible,
-              engaging, and community-driven. We're not just another learning platform;
-              we're a movement towards a more secure digital future.
+              engaging, and community-driven. We're not just building a platform; we're creating 
+              a vibrant community where learning and growth are fun, collaborative, and inspiring.
             </p>
           </div>
         </div>

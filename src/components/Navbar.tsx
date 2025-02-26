@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(() => {
     const darkMode = localStorage.getItem('darkMode');
-    return darkMode ? JSON.parse(darkMode) : false;
+    return darkMode ? JSON.parse(darkMode) : true;
   });
   const location = useLocation();
 
@@ -29,8 +29,8 @@ const Navbar = () => {
     { name: 'About', href: '/about' },
     { name: 'Community', href: '/community' },
     { name: 'Resources', href: '/resources' },
-    { name: 'Forums', href: '/forums' },
-    { name: 'Jobs', href: '/jobs' },
+    { name: 'Events & Gallery', href: '/events' },
+    //{ name: 'Jobs', href: '/jobs' },
   ];
 
   return (
@@ -70,7 +70,7 @@ const Navbar = () => {
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
-            <Button variant="primary">Sign In</Button>
+            <Button variant="primary">Join Now</Button>
           </div>
 
           <div className="flex items-center md:hidden">
@@ -116,7 +116,7 @@ const Navbar = () => {
             ))}
             <div className="px-3 py-2">
               <Button variant="primary" className="w-full">
-                Sign In
+                Join Now
               </Button>
             </div>
           </div>

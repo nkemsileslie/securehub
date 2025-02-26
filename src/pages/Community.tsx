@@ -121,7 +121,7 @@ const Community = () => {
             <div className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
                 <MessageSquare className="h-5 w-5 flex-none text-blue-600 dark:text-blue-500" />
-                Discussion Forums
+                Discussion Events
               </dt>
               <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-400">
                 <p className="flex-auto">

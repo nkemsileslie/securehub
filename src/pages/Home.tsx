@@ -11,15 +11,15 @@ const features = [
   {
     name: 'Expert Resources',
     description:
-      'Access curated learning materials, tutorials, and certification guides.',
+      'Access curated open-source learning materials, tutorials, and certification guides.',
     icon: BookOpen,
   },
-  {
+  /*{
     name: 'Career Growth',
     description:
       'Find job opportunities and advance your cybersecurity career.',
     icon: Award,
-  },
+  },*/
   {
     name: 'Hands-on Training',
     description:
@@ -45,13 +45,13 @@ const testimonials = [
     content: "SecureHub's community has been instrumental in my journey to becoming a security analyst. The resources and mentorship are unmatched.",
     author: "Sarah Chen",
     role: "Security Analyst at TechCorp",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    image: "https://images.squarespace-cdn.com/content/v1/6204821bfe06b76898b431c5/1661873071853-MHTAY4TKV654HXOIUYTI/Nneka-893+copy+2.jpg?format=1000w"
   },
   {
     content: "The CTF challenges and hands-on labs helped me develop practical skills that I use daily in my penetration testing career.",
     author: "Marcus Johnson",
-    role: "Senior Penetration Tester",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    role: "Penetration Tester",
+    image: "https://th.bing.com/th/id/OIP.nnlLhqPDawYK52Zs37eahgAAAA?rs=1&pid=ImgDetMain&h=200&w=200&c=7&dpr=1.25"
   },
 ];
 
@@ -93,17 +93,18 @@ const Home = () => {
               </a>
             </div>
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
-              Your Gateway to Cybersecurity Excellence
+                  Where Passion Fuels Cybersecurity Growth
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Join SecureHub's community of cybersecurity professionals, learn from experts,
-              and advance your career in information security.
+                Join a community of driven professionals and enthusiasts, gain exclusive insights from industry experts, and accelerate your journey in cybersecurity. Whether you're just starting out or looking to sharpen your skills, SecureHub is your launchpad for success.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
+            <a href="https://t.me/secureHub_community" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 Join the Community
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              </a>
               <Button variant="outline" size="lg">
                 Learn More
               </Button>
@@ -112,13 +113,14 @@ const Home = () => {
 
           <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none xl:ml-32">
             <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-              <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Cybersecurity operations center"
-                className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 overflow-x-hidden"
-              />
+                <img
+                  src="https://www.sxsw.com/wp-content/uploads/2019/06/2019-Hackathon-Photo-by-Randy-and-Jackie-Smith.jpg"
+                  alt="hackathon image"
+                  className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                />
             </div>
           </div>
+
         </div>
       </div>
 
