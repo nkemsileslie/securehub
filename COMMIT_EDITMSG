@@ -1,0 +1,34 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	deleted:    .gitignore
+#	deleted:    dist/assets/index-Dn4yWQ87.css
+#	deleted:    dist/assets/index-Fd202WQB.js
+#	deleted:    dist/index.html
+#	deleted:    eslint.config.js
+#	deleted:    index.html
+#	deleted:    package-lock.json
+#	deleted:    package.json
+#	deleted:    postcss.config.js
+#	deleted:    src/App.tsx
+#	deleted:    src/components/Button.tsx
+#	deleted:    src/components/Navbar.tsx
+#	deleted:    src/index.css
+#	deleted:    src/lib/utils.ts
+#	deleted:    src/main.tsx
+#	deleted:    src/pages/About.tsx
+#	deleted:    src/pages/Community.tsx
+#	deleted:    src/pages/Forums.tsx
+#	deleted:    src/pages/Home.tsx
+#	deleted:    src/pages/Jobs.tsx
+#	deleted:    src/pages/Resources.tsx
+#	deleted:    src/vite-env.d.ts
+#	deleted:    tailwind.config.js
+#	deleted:    tsconfig.app.json
+#	deleted:    tsconfig.json
+#	deleted:    tsconfig.node.json
+#	deleted:    vite.config.ts
+#
