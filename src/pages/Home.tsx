@@ -115,7 +115,7 @@ const Home = () => {
               <img
                 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Cybersecurity operations center"
-                className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 overflow-x-hidden"
               />
             </div>
           </div>
