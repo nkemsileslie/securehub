@@ -21,16 +21,19 @@ const events = [
 
 const galleryImages = [
   {
-    src: '/images/event1.jpg',
+    src: 'https://th.bing.com/th/id/OIP.AXuZzfnru30la-FWxQ32CgHaEK?rs=1&pid=ImgDetMain',
     alt: 'Workshop in progress',
+    Text: 'Working together to master cybersecurity',
   },
   {
-    src: '/images/event2.jpg',
+    src: 'https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-scaled.jpg',
     alt: 'Community Meetup Group Photo',
+    description: 'Connect with like-minded individuals',
   },
   {
-    src: '/images/event3.jpg',
+    src: 'https://www.bdi.fr/wp-content/uploads/2024/03/breizh-ctf-2023.jpg',
     alt: 'Participants in Capture the Flag Challenge',
+    description: 'Test your skills in a fun and competitive CTF challenge',
   },
 ];
 
