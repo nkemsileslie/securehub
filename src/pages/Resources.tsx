@@ -1,212 +1,217 @@
-import { BookOpen, FileText, Video, Download, Star } from 'lucide-react';
+import { BookOpen, FileText, Video, Download, Star, Clock, Users, Award, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
 import Button from '../components/Button';
 
-const resources = [
+const courses = [
   {
-    title: 'Getting Started in Cybersecurity',
-    type: 'Guide',
+    id: 1,
+    title: 'Introduction to Cybersecurity',
+    instructor: 'Dr. Sarah Mitchell',
     level: 'Beginner',
-    description: 'A comprehensive guide for those starting their cybersecurity journey.',
-    icon: BookOpen,
+    duration: '6 weeks',
+    enrolled: '2,500+ students',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80',
+    description: 'Learn the fundamentals of cybersecurity, including network security, cryptography, and security operations.',
+    modules: [
+      'Understanding Cybersecurity Landscape',
+      'Network Security Fundamentals',
+      'Introduction to Cryptography',
+      'Security Operations Basics',
+      'Risk Management',
+      'Security Best Practices'
+    ]
   },
   {
-    title: 'Web Application Security Fundamentals',
-    type: 'Course',
+    id: 2,
+    title: 'Advanced Web Application Security',
+    instructor: 'Michael Chen',
     level: 'Intermediate',
-    description: 'Learn the basics of securing web applications and preventing common vulnerabilities.',
-    icon: FileText,
+    duration: '8 weeks',
+    enrolled: '1,800+ students',
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80',
+    description: 'Master web application security testing, vulnerability assessment, and secure coding practices.',
+    modules: [
+      'Web Security Fundamentals',
+      'OWASP Top 10 Deep Dive',
+      'Secure Coding Practices',
+      'Authentication & Authorization',
+      'API Security',
+      'Security Testing Tools'
+    ]
   },
   {
-    title: 'Advanced Penetration Testing',
-    type: 'Video Series',
+    id: 3,
+    title: 'Cloud Security Masterclass',
+    instructor: 'Alex Thompson',
     level: 'Advanced',
-    description: 'In-depth tutorials on advanced penetration testing techniques.',
-    icon: Video,
-  },
-];
-
-const certifications = [
-  {
-    name: 'CompTIA Security+',
-    description: 'Foundation-level security certification covering network security, compliance, and operations.',
-    difficulty: 'Beginner',
-    duration: '2-3 months',
-  },
-  {
-    name: 'Certified Ethical Hacker (CEH)',
-    description: 'Learn to think like a hacker and understand attack vectors.',
-    difficulty: 'Intermediate',
-    duration: '3-4 months',
-  },
-  {
-    name: 'OSCP',
-    description: 'Advanced penetration testing certification with hands-on labs.',
-    difficulty: 'Advanced',
-    duration: '4-6 months',
-  },
-];
-
-const toolkits = [
-  {
-    name: 'Network Security Toolkit',
-    description: 'Essential tools for network security analysis and monitoring.',
-    downloads: '5,000+',
-  },
-  {
-    name: 'Web Security Testing Suite',
-    description: 'Comprehensive collection of web application security testing tools.',
-    downloads: '3,500+',
-  },
+    duration: '10 weeks',
+    enrolled: '1,200+ students',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=2072&q=80',
+    description: 'Comprehensive guide to securing cloud infrastructure across major platforms.',
+    modules: [
+      'Cloud Security Fundamentals',
+      'AWS Security',
+      'Azure Security',
+      'Container Security',
+      'Cloud Native Security',
+      'DevSecOps Practices'
+    ]
+  }
 ];
 
 const Resources = () => {
-  return (
-    <div className="bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <div className="relative isolate overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
-              Learning Resources
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Access our curated collection of cybersecurity resources, from beginner guides
-              to advanced tutorials and toolkits.
-            </p>
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const CourseCard = ({ course }) => (
+    <div 
+      className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg transition-all hover:shadow-xl dark:bg-gray-900 cursor-pointer"
+      onClick={() => setSelectedCourse(course)}
+    >
+      <div className="relative h-48 w-full overflow-hidden">
+        <img
+          src={course.image}
+          alt={course.title}
+          className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-4 left-4 right-4">
+          <span className="inline-flex items-center rounded-full bg-blue-600/90 px-2.5 py-0.5 text-xs font-medium text-white">
+            {course.level}
+          </span>
+        </div>
+      </div>
+      <div className="flex flex-1 flex-col p-6">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          {course.title}
+        </h3>
+        <p className="mt-2 flex-1 text-sm text-gray-600 dark:text-gray-400">
+          {course.description}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex items-center gap-1">
+            <Clock className="h-4 w-4" />
+            {course.duration}
+          </div>
+          <div className="flex items-center gap-1">
+            <Users className="h-4 w-4" />
+            {course.enrolled}
+          </div>
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-400" />
+            {course.rating}
           </div>
         </div>
       </div>
+    </div>
+  );
 
-      {/* Featured Resources */}
-      <div className="bg-gray-50 dark:bg-gray-800">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Featured Resources
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Start your learning journey with our most popular resources.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {resources.map((resource) => (
-              <div
-                key={resource.title}
-                className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-900"
-              >
-                <div className="flex-1 p-6">
-                  <div className="flex items-center gap-x-4">
-                    <resource.icon className="h-6 w-6 text-blue-600 dark:text-blue-500" />
-                    <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                      {resource.type} • {resource.level}
-                    </span>
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {resource.title}
-                    </h3>
-                    <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
-                      {resource.description}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-x-4 border-t border-gray-900/5 bg-gray-50 p-6 dark:border-gray-800 dark:bg-gray-900">
-                  <Button variant="primary" size="sm" className="w-full">
-                    Access Resource
-                  </Button>
-                </div>
-              </div>
-            ))}
+  const CourseDetail = ({ course }) => (
+    <div className="space-y-8">
+      <button 
+        onClick={() => setSelectedCourse(null)}
+        className="flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-400"
+      >
+        <ChevronRight className="h-4 w-4 rotate-180" />
+        <span className="ml-1">Back to Courses</span>
+      </button>
+      
+      <div className="overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-900">
+        <div className="relative h-72 w-full">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6">
+            <span className="inline-flex items-center rounded-full bg-blue-600/90 px-2.5 py-0.5 text-xs font-medium text-white">
+              {course.level}
+            </span>
+            <h1 className="mt-2 text-3xl font-bold text-white">{course.title}</h1>
           </div>
         </div>
-      </div>
-
-      {/* Certification Paths */}
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Certification Paths
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-            Explore certification paths and study materials to advance your career.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {certifications.map((cert) => (
-            <div
-              key={cert.name}
-              className="rounded-lg bg-white p-8 shadow-lg dark:bg-gray-900"
-            >
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                {cert.name}
-              </h3>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                {cert.description}
-              </p>
-              <dl className="mt-4 space-y-2">
-                <div className="flex items-center justify-between">
-                  <dt className="text-sm text-gray-600 dark:text-gray-400">Difficulty:</dt>
-                  <dd className="text-sm font-medium text-gray-900 dark:text-white">
-                    {cert.difficulty}
-                  </dd>
-                </div>
-                <div className="flex items-center justify-between">
-                  <dt className="text-sm text-gray-600 dark:text-gray-400">Duration:</dt>
-                  <dd className="text-sm font-medium text-gray-900 dark:text-white">
-                    {cert.duration}
-                  </dd>
-                </div>
-              </dl>
-              <Button variant="outline" size="sm" className="mt-6 w-full">
-                View Study Path
+        
+        <div className="p-6">
+          <div className="flex flex-wrap gap-6 border-b border-gray-200 pb-6 dark:border-gray-700">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5 text-blue-600 dark:text-blue-500" />
+              <span className="text-gray-600 dark:text-gray-400">{course.duration}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="h-5 w-5 text-blue-600 dark:text-blue-500" />
+              <span className="text-gray-600 dark:text-gray-400">{course.enrolled}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="h-5 w-5 text-yellow-400" />
+              <span className="text-gray-600 dark:text-gray-400">{course.rating} Rating</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="h-5 w-5 text-blue-600 dark:text-blue-500" />
+              <span className="text-gray-600 dark:text-gray-400">Certificate of Completion</span>
+            </div>
+          </div>
+          
+          <div className="mt-6 space-y-6">
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">About this course</h2>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">{course.description}</p>
+            </div>
+            
+            <div>
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Course Modules</h2>
+              <ul className="mt-4 space-y-4">
+                {course.modules.map((module, index) => (
+                  <li 
+                    key={index}
+                    className="flex items-center gap-4 rounded-lg border border-gray-200 p-4 dark:border-gray-700"
+                  >
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600/10 text-blue-600 dark:bg-blue-500/10 dark:text-blue-500">
+                      {index + 1}
+                    </div>
+                    <span className="text-gray-900 dark:text-white">{module}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="flex justify-center pt-4">
+              <Button size="lg">
+                Enroll Now
               </Button>
             </div>
-          ))}
+          </div>
         </div>
       </div>
+    </div>
+  );
 
-      {/* Security Toolkits */}
-      <div className="bg-gray-50 dark:bg-gray-800">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Security Toolkits
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
-              Download our curated collection of security tools and resources.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {toolkits.map((toolkit) => (
-              <div
-                key={toolkit.name}
-                className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-900"
-              >
-                <div className="flex-1 p-6">
-                  <div className="flex items-center gap-x-4">
-                    <Download className="h-5 w-5 text-blue-600 dark:text-blue-500" />
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {toolkit.downloads} downloads
-                    </span>
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {toolkit.name}
-                    </h3>
-                    <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
-                      {toolkit.description}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-x-4 border-t border-gray-900/5 bg-gray-50 p-6 dark:border-gray-800 dark:bg-gray-900">
-                  <Button variant="primary" size="sm" className="w-full">
-                    Download Toolkit
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="mx-auto max-w-7xl px-6 py-24">
+        {selectedCourse ? (
+          <CourseDetail course={selectedCourse} />
+        ) : (
+          <>
+            <div className="text-center">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+                Security Courses
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+                Master cybersecurity with our comprehensive courses. Learn from industry experts
+                and advance your career.
+              </p>
+            </div>
+            
+            <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {courses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
