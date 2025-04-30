@@ -57,7 +57,7 @@ const Navbar = () => {
                 className={`text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 ${
                   location.pathname === item.href
                     ? 'font-semibold text-blue-600 dark:text-blue-500'
-                    : 'https://tinyurl.com/SecureHubb'
+                    : ''
                 }`}
               >
                 {item.name}
@@ -70,6 +70,7 @@ const Navbar = () => {
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
+            <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
             <Button variant="primary">Join Now</Button>
           </div>
 
@@ -107,7 +108,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 ${
                   location.pathname === item.href
                     ? 'font-semibold text-blue-600 dark:text-blue-500'
-                    : 'https://tinyurl.com/SecureHubb'
+                    : ''
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -115,6 +116,7 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-3 py-2">
+            <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
               <Button variant="primary" className="w-full">
                 Join Now
               </Button>
