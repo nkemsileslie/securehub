@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Network } from 'lucide-react';
-import Button from './Button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,9 +69,14 @@ const Navbar = () => {
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
-            <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
-            <Button variant="primary">Join Now</Button> </a>
-
+            <a
+              href="https://tinyurl.com/SecureHubb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Join Now
+            </a>
           </div>
 
           <div className="flex items-center md:hidden">
@@ -117,10 +121,14 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-3 py-2">
-            <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="w-full"> 
+              <a
+                href="https://tinyurl.com/SecureHubb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
                 Join Now
-              </Button> </a>
+              </a>
             </div>
           </div>
         </div>
