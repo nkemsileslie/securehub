@@ -57,7 +57,7 @@ const Navbar = () => {
                 className={`text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 ${
                   location.pathname === item.href
                     ? 'font-semibold text-blue-600 dark:text-blue-500'
-                    : ''
+                    : 'https://tinyurl.com/SecureHubb'
                 }`}
               >
                 {item.name}
