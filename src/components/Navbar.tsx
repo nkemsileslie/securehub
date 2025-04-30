@@ -71,7 +71,8 @@ const Navbar = () => {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
             <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
-            <Button variant="primary">Join Now</Button>
+            <Button variant="primary">Join Now</Button> </a>
+
           </div>
 
           <div className="flex items-center md:hidden">
@@ -117,7 +118,7 @@ const Navbar = () => {
             ))}
             <div className="px-3 py-2">
             <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="w-full">
+              <Button variant="primary" className="w-full"> </a>
                 Join Now
               </Button>
             </div>
