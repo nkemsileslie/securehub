@@ -118,9 +118,9 @@ const Navbar = () => {
             ))}
             <div className="px-3 py-2">
             <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" className="w-full"> </a>
+              <Button variant="primary" className="w-full"> 
                 Join Now
-              </Button>
+              </Button> </a>
             </div>
           </div>
         </div>
