@@ -99,7 +99,7 @@ const Home = () => {
                 Join a community of driven professionals and enthusiasts, gain exclusive insights from industry experts, and accelerate your journey in cybersecurity. Whether you're just starting out or looking to sharpen your skills, SecureHub is your launchpad for success.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
-            <a href="https://t.me/secureHub_community" target="_blank" rel="noopener noreferrer">
+            <a href="https://tinyurl.com/SecureHubb" target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 Join the Community
                 <ArrowRight className="ml-2 h-5 w-5" />
